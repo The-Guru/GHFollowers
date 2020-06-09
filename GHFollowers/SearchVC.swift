@@ -36,20 +36,23 @@ class SearchVC: UIViewController {
     usernameTextField.text = ""
   }
   
-  func createDismissKeyboardTapGesture() {
+  private func createDismissKeyboardTapGesture() {
     let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
     view.addGestureRecognizer(tap)
   }
   
-  @objc func pushFollowerListVC() {
-    guard isUsernameEntered else { print("no username"); return }
+  @objc private func pushFollowerListVC() {
+    guard isUsernameEntered else {
+      presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for 😄.", buttonTitle: "Ok")
+      return
+    }
     let followerListVC      = FollowerListVC()
     followerListVC.username = usernameTextField.text
     followerListVC.title    = usernameTextField.text
     navigationController?.pushViewController(followerListVC, animated: true)
   }
   
-  func configureLogoImageView() {
+  private func configureLogoImageView() {
     view.addSubview(logoImageView)
     logoImageView.translatesAutoresizingMaskIntoConstraints = false
     logoImageView.image = UIImage(named: "gh-logo")!
@@ -62,7 +65,7 @@ class SearchVC: UIViewController {
     ])
   }
   
-  func configureTextField() {
+  private func configureTextField() {
     view.addSubview(usernameTextField)
     usernameTextField.delegate = self
     
@@ -74,7 +77,7 @@ class SearchVC: UIViewController {
     ])
   }
   
-  func configureCallToActionButton() {
+  private func configureCallToActionButton() {
     view.addSubview(callToActionButton)
     callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
     
