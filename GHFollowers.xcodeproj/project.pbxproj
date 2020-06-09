@@ -70,22 +70,54 @@
 		ED6D3232248E7FFD00145D73 /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				ED6D3233248E7FFD00145D73 /* AppDelegate.swift */,
-				ED6D3235248E7FFD00145D73 /* SceneDelegate.swift */,
-				ED6D323C248E800000145D73 /* Assets.xcassets */,
-				ED6D323E248E800000145D73 /* LaunchScreen.storyboard */,
+				ED6D325D248FDF2600145D73 /* Extensions */,
+				ED6D325C248FDED900145D73 /* Custom Views */,
+				ED6D325B248FDE2600145D73 /* Screens */,
+				ED6D325E248FE06900145D73 /* Support */,
 				ED6D3241248E800000145D73 /* Info.plist */,
+			);
+			path = GHFollowers;
+			sourceTree = "<group>";
+		};
+		ED6D325B248FDE2600145D73 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
 				ED6D3249248E8A9200145D73 /* SearchVC.swift */,
 				ED6D3251248F9D5A00145D73 /* FollowerListVC.swift */,
 				ED6D324B248E8C1D00145D73 /* FavoritesListVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		ED6D325C248FDED900145D73 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
 				ED6D324D248F79FF00145D73 /* GFButton.swift */,
 				ED6D324F248F7E3300145D73 /* GFTextField.swift */,
 				ED6D3253248FC66400145D73 /* GFTitleLabel.swift */,
 				ED6D3255248FC85700145D73 /* GFBodyLabel.swift */,
 				ED6D3257248FC93B00145D73 /* GFAlertVC.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		ED6D325D248FDF2600145D73 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				ED6D3259248FCFD700145D73 /* UIViewController+Ext.swift */,
 			);
-			path = GHFollowers;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ED6D325E248FE06900145D73 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				ED6D3233248E7FFD00145D73 /* AppDelegate.swift */,
+				ED6D3235248E7FFD00145D73 /* SceneDelegate.swift */,
+				ED6D323C248E800000145D73 /* Assets.xcassets */,
+				ED6D323E248E800000145D73 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
