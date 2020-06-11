@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GHFollowers
 //
-//  Created by iMac Óscar on 10/06/2020.
+//  Created by iMac Óscar on 11/06/2020.
 //  Copyright © 2020 Óscar García. All rights reserved.
 //
 
