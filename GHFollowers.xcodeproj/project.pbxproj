@@ -68,8 +68,8 @@
 		ED6D328124927FD000145D73 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED6D328324939A9B00145D73 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 		ED6D32852493A3E300145D73 /* GFItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoVC.swift; sourceTree = "<group>"; };
-		ED6D32872493CB6C00145D73 /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GFRepoItemVC.swift; path = ItemInfoVCs/GFRepoItemVC.swift; sourceTree = "<group>"; };
-		ED6D32892493CE9100145D73 /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GFFollowerItemVC.swift; path = ItemInfoVCs/GFFollowerItemVC.swift; sourceTree = "<group>"; };
+		ED6D32872493CB6C00145D73 /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemVC.swift; sourceTree = "<group>"; };
+		ED6D32892493CE9100145D73 /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,9 +229,6 @@
 		ED6D32752492280900145D73 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED6D32852493A3E300145D73 /* GFItemInfoVC.swift */,
-				ED6D32872493CB6C00145D73 /* GFRepoItemVC.swift */,
-				ED6D32892493CE9100145D73 /* GFFollowerItemVC.swift */,
 				ED6D328B2493CF0A00145D73 /* ItemInfoVCs */,
 				ED6D3257248FC93B00145D73 /* GFAlertVC.swift */,
 				ED6D327D2492778700145D73 /* GFUserInfoHeaderVC.swift */,
@@ -252,6 +249,9 @@
 		ED6D328B2493CF0A00145D73 /* ItemInfoVCs */ = {
 			isa = PBXGroup;
 			children = (
+				ED6D32872493CB6C00145D73 /* GFRepoItemVC.swift */,
+				ED6D32892493CE9100145D73 /* GFFollowerItemVC.swift */,
+				ED6D32852493A3E300145D73 /* GFItemInfoVC.swift */,
 			);
 			path = ItemInfoVCs;
 			sourceTree = "<group>";
