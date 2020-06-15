@@ -39,6 +39,7 @@
 		ED6D328D2494BD5C00145D73 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D328C2494BD5C00145D73 /* Date+Ext.swift */; };
 		ED6D328F2494BD9700145D73 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D328E2494BD9700145D73 /* String+Ext.swift */; };
 		ED6D32912497538C00145D73 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D32902497538C00145D73 /* PersistenceManager.swift */; };
+		ED6D3293249767C100145D73 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D3292249767C100145D73 /* FavoriteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		ED6D328C2494BD5C00145D73 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		ED6D328E2494BD9700145D73 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		ED6D32902497538C00145D73 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		ED6D3292249767C100145D73 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				ED6D326B2490D9B300145D73 /* FollowerCell.swift */,
+				ED6D3292249767C100145D73 /* FavoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				ED6D324A248E8A9200145D73 /* SearchVC.swift in Sources */,
 				ED6D328A2493CE9100145D73 /* GFFollowerItemVC.swift in Sources */,
 				ED6D328424939A9B00145D73 /* GFItemInfoView.swift in Sources */,
+				ED6D3293249767C100145D73 /* FavoriteCell.swift in Sources */,
 				ED6D326C2490D9B300145D73 /* FollowerCell.swift in Sources */,
 				ED6D32912497538C00145D73 /* PersistenceManager.swift in Sources */,
 				ED6D3256248FC85700145D73 /* GFBodyLabel.swift in Sources */,
