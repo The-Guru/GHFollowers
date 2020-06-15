@@ -1,5 +1,5 @@
 //
-//  PersistanceManager.swift
+//  PersistenceManger.swift
 //  GHFollowers
 //
 //  Created by iMac Óscar on 15/06/2020.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum PersistanceActionType {
+enum PersistenceActionType {
   case add, remove
 }
 
-enum PersinstanceManger {
+enum PersistenceManager {
   
   static private let defaults = UserDefaults.standard
   
@@ -20,7 +20,7 @@ enum PersinstanceManger {
     static let favorites = "favorites"
   }
   
-  static func updateWith(favorite: Follower, actionType: PersistanceActionType, completed: (GFError?) -> Void) {
+  static func updateWith(favorite: Follower, actionType: PersistenceActionType, completed: (GFError?) -> Void) {
     retrieveFavorites { result in
       switch result {
       case .success(let favorites):
@@ -39,7 +39,7 @@ enum PersinstanceManger {
           retrievedFavorites.removeAll { $0.login == favorite.login }
         }
         
-        completed(save(favorites: favorites))
+        completed(save(favorites: retrievedFavorites))
         
       case .failure(let error):
         completed(error)
