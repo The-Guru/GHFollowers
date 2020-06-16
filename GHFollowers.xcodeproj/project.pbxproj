@@ -42,6 +42,7 @@
 		ED6D3296249776AF00145D73 /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D3295249776AF00145D73 /* GFTabBarController.swift */; };
 		ED6D329824978B8500145D73 /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D329724978B8500145D73 /* GFAlertContainerView.swift */; };
 		ED6D329A2497AE2900145D73 /* GFDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D32992497AE2900145D73 /* GFDataLoadingVC.swift */; };
+		ED6D329C2497CD3D00145D73 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D329B2497CD3D00145D73 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		ED6D3295249776AF00145D73 /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		ED6D329724978B8500145D73 /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		ED6D32992497AE2900145D73 /* GFDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingVC.swift; sourceTree = "<group>"; };
+		ED6D329B2497CD3D00145D73 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				ED6D3259248FCFD700145D73 /* UIViewController+Ext.swift */,
 				ED6D328C2494BD5C00145D73 /* Date+Ext.swift */,
+				ED6D329B2497CD3D00145D73 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6D329C2497CD3D00145D73 /* UIView+Ext.swift in Sources */,
 				ED6D3263248FEA4900145D73 /* User.swift in Sources */,
 				ED6D3250248F7E3300145D73 /* GFTextField.swift in Sources */,
 				ED6D324C248E8C1D00145D73 /* FavoritesListVC.swift in Sources */,
