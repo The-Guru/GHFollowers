@@ -219,9 +219,11 @@ extension FollowerListVC: UISearchResultsUpdating {
 extension FollowerListVC: UserInfoVCDelegate {
   
   func didRequestFollowers(for username: String) {
-    self.username = username
-    title         = username
-    page          = 1
+    self.username    = username
+    title            = username
+    page             = 1
+    isSearching      = false
+    hasMoreFollowers = true
 
     followers.removeAll()
     filteredFollowers.removeAll()
