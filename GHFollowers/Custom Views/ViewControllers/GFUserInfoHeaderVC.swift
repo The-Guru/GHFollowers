@@ -19,25 +19,28 @@ class GFUserInfoHeaderVC: UIViewController {
   
   var user: User!
   
+  
   init(user: User) {
     super.init(nibName: nil, bundle: nil)
     self.user = user
   }
   
+  
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    addSubviews()
+    view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
     layoutUI()
     configureUIElements()
   }
   
+  
   private func configureUIElements() {
-    downloadAvatarImage()
-
+    avatarImageView.downloadImage(fromURL: user.avatarUrl)
     usernameLabel.text          = user.login
     nameLabel.text              = user.name ?? ""
     locationLabel.text          = user.location ?? "No Location"
@@ -48,15 +51,6 @@ class GFUserInfoHeaderVC: UIViewController {
     locationImageView.tintColor = .secondaryLabel
   }
   
-  private func downloadAvatarImage() {
-    NetworkManager.shared.downloadImage(from: user.avatarUrl) { image in
-         DispatchQueue.main.async { self.avatarImageView.image = image }
-       }
-  }
-  
-  private func addSubviews() {
-    view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
-  }
   
   private func layoutUI() {
     let padding: CGFloat          = 20

@@ -14,6 +14,9 @@ protocol UserInfoVCDelegate: class {
 
 class UserInfoVC: GFDataLoadingVC {
   
+  let scrollView          = UIScrollView()
+  let contentView         = UIView()
+
   let headerView          = UIView()
   let itemViewOne         = UIView()
   let itemViewTwo         = UIView()
@@ -23,18 +26,36 @@ class UserInfoVC: GFDataLoadingVC {
   var username: String!
   weak var delegate: UserInfoVCDelegate!
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     configureViewController()
+    configureScrollView()
     layoutUI()
     getUserInfo()
   }
+  
   
   private func configureViewController() {
     view.backgroundColor              = .systemBackground
     let doneButton                    = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
     navigationItem.rightBarButtonItem = doneButton
   }
+  
+  
+  private func configureScrollView() {
+    view.addSubview(scrollView)
+    scrollView.addSubview(contentView)
+    
+    scrollView.pinToEdges(of: view)
+    contentView.pinToEdges(of: scrollView)
+    
+    NSLayoutConstraint.activate([
+      contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+      contentView.heightAnchor.constraint(equalToConstant: 600)
+    ])
+  }
+  
   
   private func getUserInfo() {
     NetworkManager.shared.getUserInfo(for: username) { result in
@@ -48,6 +69,7 @@ class UserInfoVC: GFDataLoadingVC {
     }
   }
   
+  
   private func configureUIElements(with user: User) {
     self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
     self.add(childVC: GFRepoItemVC(user: user, delegate: self), to: self.itemViewOne)
@@ -55,23 +77,24 @@ class UserInfoVC: GFDataLoadingVC {
     self.dateLabel.text = "GitHub since \(user.createdAt.convertToMonthYearFormat())"
   }
   
+  
   private func layoutUI() {
     itemViews               = [headerView, itemViewOne, itemViewTwo, dateLabel]
     let padding: CGFloat    = 20
     let itemHeight: CGFloat = 140
     
     for itemView in itemViews {
-      view.addSubview(itemView)
+      contentView.addSubview(itemView)
       itemView.translatesAutoresizingMaskIntoConstraints = false
       
       NSLayoutConstraint.activate([
-        itemView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-        itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -padding)
+        itemView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+        itemView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant:  -padding)
       ])
     }
     
     NSLayoutConstraint.activate([
-      headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+      headerView.topAnchor.constraint(equalTo: contentView.topAnchor),
       headerView.heightAnchor.constraint(equalToConstant: 210),
       
       itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
@@ -85,6 +108,7 @@ class UserInfoVC: GFDataLoadingVC {
     ])
   }
   
+  
   private func add(childVC: UIViewController, to containerView: UIView) {
     addChild(childVC)
     containerView.addSubview(childVC.view)
@@ -92,10 +116,12 @@ class UserInfoVC: GFDataLoadingVC {
     childVC.didMove(toParent: self)
   }
   
+  
   @objc private func dismissVC() {
     dismiss(animated: true)
   }
 }
+
 
 extension UserInfoVC: GFRepoItemVCDelegate {
 
@@ -108,6 +134,7 @@ extension UserInfoVC: GFRepoItemVCDelegate {
     presentSafariVC(with: url)
   }
 }
+
 
 extension UserInfoVC: GFFollowerItemVCDelegate {
 
