@@ -12,4 +12,4 @@ Some interesting topics you will learn in this course:
 
 Some screenshots of the project:
 
-![](https://github.com/The-Guru/GHFollowers/GF1.png)
+![](https://github.com/The-Guru/GHFollowers/GF1.png?raw=true)
