@@ -16,3 +16,5 @@ Some screenshots of the project:
 ![](https://github.com/The-Guru/GHFollowers/blob/master/GF2.png)
 ![](https://github.com/The-Guru/GHFollowers/blob/master/GF3.png)
 ![](https://github.com/The-Guru/GHFollowers/blob/master/GF4.png)
+
+I can't recommend enough taking this course if you want to speed up your iOS developing skills!
